@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71EFE2BB1760595B006D468C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE2BA1760595B006D468C /* ImageIO.framework */; };
+		71EFE2BD176059CA006D468C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE2BC176059CA006D468C /* MobileCoreServices.framework */; };
+		71EFE2CB17606038006D468C /* Vbo.h in Sources */ = {isa = PBXBuildFile; fileRef = 71EFE2C817606015006D468C /* Vbo.h */; };
 		94147EDC14773F2200769513 /* CinderGLKitTemplateSketch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94147EDB14773F2200769513 /* CinderGLKitTemplateSketch.cpp */; };
 		9442F870145F2A3B00C76F9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9442F86F145F2A3B00C76F9E /* UIKit.framework */; };
 		9442F872145F2A3B00C76F9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9442F871145F2A3B00C76F9E /* Foundation.framework */; };
@@ -30,6 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71EFE2BA1760595B006D468C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		71EFE2BC176059CA006D468C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		71EFE2C617606015006D468C /* CinderGLSketch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderGLSketch.h; sourceTree = "<group>"; };
+		71EFE2C717606015006D468C /* CinderGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderGLViewController.h; sourceTree = "<group>"; };
+		71EFE2C817606015006D468C /* Vbo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vbo.h; sourceTree = "<group>"; };
 		94147EDB14773F2200769513 /* CinderGLKitTemplateSketch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CinderGLKitTemplateSketch.cpp; path = src/CinderGLKitTemplateSketch.cpp; sourceTree = SOURCE_ROOT; };
 		94147EDD14773F3700769513 /* CinderGLKitTemplateSketch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderGLKitTemplateSketch.h; sourceTree = "<group>"; };
 		9442F86B145F2A3B00C76F9E /* CinderGLKitTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinderGLKitTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,9 +58,6 @@
 		9464C4BD145F2F6300E019B6 /* CinderGLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CinderGLView.xib; sourceTree = SOURCE_ROOT; };
 		94F213B81475A3B300D885ED /* color.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = color.fsh; sourceTree = "<group>"; };
 		94F213B91475A3B300D885ED /* color.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = color.vsh; sourceTree = "<group>"; };
-		94FF67A01485D0FE005A369C /* CinderGLSketch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderGLSketch.h; sourceTree = "<group>"; };
-		94FF67A11485D0FE005A369C /* CinderGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderGLViewController.h; sourceTree = "<group>"; };
-		94FF67A21485D0FE005A369C /* Vbo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vbo.h; sourceTree = "<group>"; };
 		94FF67A41485D0FE005A369C /* CinderGLSketch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CinderGLSketch.mm; sourceTree = "<group>"; };
 		94FF67A51485D0FE005A369C /* CinderGLViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CinderGLViewController.mm; sourceTree = "<group>"; };
 		94FF67A61485D0FE005A369C /* Vbo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vbo.cpp; sourceTree = "<group>"; };
@@ -65,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EFE2BD176059CA006D468C /* MobileCoreServices.framework in Frameworks */,
+				71EFE2BB1760595B006D468C /* ImageIO.framework in Frameworks */,
 				E2E774051473187900FD113C /* CoreMedia.framework in Frameworks */,
 				E2E774031473184D00FD113C /* CoreVideo.framework in Frameworks */,
 				944F2D041460D2A700BAB970 /* QuartzCore.framework in Frameworks */,
@@ -110,6 +117,8 @@
 		9442F86E145F2A3B00C76F9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71EFE2BC176059CA006D468C /* MobileCoreServices.framework */,
+				71EFE2BA1760595B006D468C /* ImageIO.framework */,
 				E2E774041473187900FD113C /* CoreMedia.framework */,
 				E2E774021473184D00FD113C /* CoreVideo.framework */,
 				944F2D031460D2A700BAB970 /* QuartzCore.framework */,
@@ -179,9 +188,9 @@
 		94FF679F1485D0FE005A369C /* include */ = {
 			isa = PBXGroup;
 			children = (
-				94FF67A01485D0FE005A369C /* CinderGLSketch.h */,
-				94FF67A11485D0FE005A369C /* CinderGLViewController.h */,
-				94FF67A21485D0FE005A369C /* Vbo.h */,
+				71EFE2C617606015006D468C /* CinderGLSketch.h */,
+				71EFE2C717606015006D468C /* CinderGLViewController.h */,
+				71EFE2C817606015006D468C /* Vbo.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -259,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EFE2CB17606038006D468C /* Vbo.h in Sources */,
 				9442F8A6145F2BE100C76F9E /* AppDelegate.mm in Sources */,
 				9442F8A7145F2BE100C76F9E /* main.m in Sources */,
 				94147EDC14773F2200769513 /* CinderGLKitTemplateSketch.cpp in Sources */,
@@ -280,8 +290,9 @@
 				CINDER_PATH_ryan = "../../../code/frameworks/cinder-es2-timeline";
 				CINDER_PATH_tom = /Users/tom/Documents/Code/Cinder/CinderES2;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -312,8 +323,9 @@
 				CINDER_PATH_ryan = "../../../code/frameworks/cinder-es2-timeline";
 				CINDER_PATH_tom = /Users/tom/Documents/Code/Cinder/CinderES2;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -333,6 +345,7 @@
 		9442F892145F2A3B00C76F9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CINDER_PATH = "$(CINDER_PATH_$(USER))";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CinderGLKitTemplate-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
@@ -347,6 +360,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -354,6 +368,7 @@
 		9442F893145F2A3B00C76F9E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CINDER_PATH = "$(CINDER_PATH_$(USER))";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CinderGLKitTemplate-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
@@ -368,6 +383,7 @@
 					"-lz",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

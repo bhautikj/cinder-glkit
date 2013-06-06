@@ -6,7 +6,7 @@
 #include "cinder/Color.h"
 #include "cinder/Rect.h"
 
-#include <tr1/unordered_map>
+#include <unordered_map>
 
 namespace cinder { namespace gl {
 
@@ -129,7 +129,7 @@ protected:
     size_t mMinBoundAttributeLength;
     std::vector< int > mEnabledLocations;
 
-    std::tr1::unordered_map< std::string, AttributeRef > mAttributes;
+    std::unordered_map< std::string, AttributeRef > mAttributes;
 
 };
 

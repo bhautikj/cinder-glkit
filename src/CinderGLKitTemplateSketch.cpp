@@ -5,13 +5,26 @@
 
 using namespace std;
 
+const char* color_fsh = "\
+uniform highp vec4 u_color;\
+void main(){\
+    gl_FragColor = vec4(u_color);\
+}";
+
+const char* color_vsh = "uniform mat4 u_mvp_matrix;\
+attribute vec3 position;\
+void main(){\
+    gl_Position = u_mvp_matrix * vec4(position, 1.);\
+}";
+
 void CinderGLKitTemplateSketch::setup()
 {
     m_vbo = gl::Vbo::create(GL_LINE_STRIP);
     m_vbo->set(gl::Vbo::Attribute::create("position", 3));
     
     try{
-        m_color_shader = gl::GlslProg(app::loadResource("color.vsh"), app::loadResource("color.fsh"));
+        m_color_shader = gl::GlslProg(color_vsh, color_fsh);
+        //m_color_shader = gl::GlslProg(app::loadResource("color.vsh"), app::loadResource("color.fsh"));
     }catch(Exception &e){
         cout << "Shader Compile Failed: " << e.what();
     }

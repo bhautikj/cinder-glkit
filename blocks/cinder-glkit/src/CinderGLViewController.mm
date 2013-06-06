@@ -27,7 +27,7 @@ using namespace ci::app;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+  
     self.context = [[EAGLContext alloc] initWithAPI: kEAGLRenderingAPIOpenGLES2];
     self.preferredFramesPerSecond = 60;
     
@@ -187,7 +187,7 @@ using namespace ci::app;
         auto touch_list = [self convertTouches: touches andAddToMap: YES orRemoveFromMap: NO];
         [self updateActiveTouches];
         if(!touch_list.empty())
-            mSketch->touchesBegan(TouchEvent(touch_list));
+            mSketch->touchesMoved(TouchEvent(0, touch_list));
     }
 }
 
@@ -197,7 +197,7 @@ using namespace ci::app;
         auto touch_list = [self convertTouches: touches andAddToMap: NO orRemoveFromMap: NO];
         [self updateActiveTouches];
         if(!touch_list.empty())
-            mSketch->touchesMoved(TouchEvent(touch_list));
+            mSketch->touchesMoved(TouchEvent(0, touch_list));
     }
 }
 
@@ -207,7 +207,7 @@ using namespace ci::app;
         auto touch_list = [self convertTouches: touches andAddToMap: NO orRemoveFromMap: YES];
         [self updateActiveTouches];
         if(!touch_list.empty())
-            mSketch->touchesEnded(TouchEvent(touch_list));
+            mSketch->touchesEnded(TouchEvent(0, touch_list));
     }
 }
 
@@ -217,7 +217,7 @@ using namespace ci::app;
         auto touch_list = [self convertTouches: touches andAddToMap: NO orRemoveFromMap: YES];
         [self updateActiveTouches];
         if(!touch_list.empty())
-            mSketch->touchesCanceled(TouchEvent(touch_list));
+            mSketch->touchesCanceled(TouchEvent(0, touch_list));
     }
 }
 

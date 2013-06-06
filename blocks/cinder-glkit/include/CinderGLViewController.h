@@ -1,14 +1,14 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
-#include <tr1/unordered_map>
+#include <unordered_map>
 #include "CinderGLSketch.h"
 
 using namespace ci;
 
 @interface CinderGLViewController : GLKViewController {
     CinderGLSketch *mSketch;
-    std::tr1::unordered_map< UITouch*, uint32_t > mTouchIds;
+    std::unordered_map< UITouch*, uint32_t > mTouchIds;
 }
 
 @property (strong, nonatomic) EAGLContext *context;
