@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71142AA0176118C7005BF5C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71142A9F176118C7005BF5C5 /* Default-568h@2x.png */; };
 		71EFE2BB1760595B006D468C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE2BA1760595B006D468C /* ImageIO.framework */; };
 		71EFE2BD176059CA006D468C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE2BC176059CA006D468C /* MobileCoreServices.framework */; };
 		71EFE2CB17606038006D468C /* Vbo.h in Sources */ = {isa = PBXBuildFile; fileRef = 71EFE2C817606015006D468C /* Vbo.h */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71142A9F176118C7005BF5C5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		71EFE2BA1760595B006D468C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		71EFE2BC176059CA006D468C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		71EFE2C617606015006D468C /* CinderGLSketch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderGLSketch.h; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		9442F860145F2A3B00C76F9E = {
 			isa = PBXGroup;
 			children = (
+				71142A9F176118C7005BF5C5 /* Default-568h@2x.png */,
 				9442F879145F2A3B00C76F9E /* CinderGLKitTemplate */,
 				9442F86E145F2A3B00C76F9E /* Frameworks */,
 				9442F86C145F2A3B00C76F9E /* Products */,
@@ -258,6 +261,7 @@
 				94F213C11475A94200D885ED /* color.fsh in Resources */,
 				94F213C21475A94200D885ED /* color.vsh in Resources */,
 				9464C4BE145F2F6300E019B6 /* CinderGLView.xib in Resources */,
+				71142AA0176118C7005BF5C5 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

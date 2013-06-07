@@ -8,7 +8,8 @@ using namespace ci;
 
 @interface CinderGLViewController : GLKViewController {
     CinderGLSketch *mSketch;
-    std::unordered_map< UITouch*, uint32_t > mTouchIds;
+    //bjoshi: mysterious fix. change unordered_map to map and I no longer get strange EXC_BAD_ACCESS errors
+    std::map< UITouch*, uint32_t > mTouchIds;
 }
 
 @property (strong, nonatomic) EAGLContext *context;

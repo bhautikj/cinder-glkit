@@ -4,6 +4,7 @@
 
 #include "cinder/Area.h"
 #include "cinder/Vector.h"
+#include "cinder/app/App.h"
 #include "cinder/app/TouchEvent.h"
 
 using namespace ci;
@@ -104,6 +105,8 @@ using namespace ci::app;
 
 #pragma mark - Touch Handling
 
+#define MAKE_PAIR(a,b) std::pair<decltype(a),decltype(b)>((a),(b))
+
 - (uint32_t)addTouchToMap:(UITouch*)touch
 {
     // Find the lowest unused touch ID
@@ -120,8 +123,10 @@ using namespace ci::app;
         }
     }
     
-    mTouchIds.insert(std::make_pair(touch, candidate_id));
-    
+    //mTouchIds.insert(std::make_pair(touch, candidate_id));
+    //mTouchIds.insert(MAKE_PAIR(touch, candidate_id));
+    mTouchIds[touch] = candidate_id;
+  
     return candidate_id;
 }
 
@@ -187,7 +192,7 @@ using namespace ci::app;
         auto touch_list = [self convertTouches: touches andAddToMap: YES orRemoveFromMap: NO];
         [self updateActiveTouches];
         if(!touch_list.empty())
-            mSketch->touchesMoved(TouchEvent(0, touch_list));
+            mSketch->touchesMoved(TouchEvent(cinder::app::getWindow(), touch_list));
     }
 }
 
@@ -197,7 +202,7 @@ using namespace ci::app;
         auto touch_list = [self convertTouches: touches andAddToMap: NO orRemoveFromMap: NO];
         [self updateActiveTouches];
         if(!touch_list.empty())
-            mSketch->touchesMoved(TouchEvent(0, touch_list));
+            mSketch->touchesMoved(TouchEvent(cinder::app::getWindow(), touch_list));
     }
 }
 
@@ -207,7 +212,7 @@ using namespace ci::app;
         auto touch_list = [self convertTouches: touches andAddToMap: NO orRemoveFromMap: YES];
         [self updateActiveTouches];
         if(!touch_list.empty())
-            mSketch->touchesEnded(TouchEvent(0, touch_list));
+            mSketch->touchesEnded(TouchEvent(cinder::app::getWindow(), touch_list));
     }
 }
 
@@ -217,7 +222,7 @@ using namespace ci::app;
         auto touch_list = [self convertTouches: touches andAddToMap: NO orRemoveFromMap: YES];
         [self updateActiveTouches];
         if(!touch_list.empty())
-            mSketch->touchesCanceled(TouchEvent(0, touch_list));
+            mSketch->touchesCanceled(TouchEvent(cinder::app::getWindow(), touch_list));
     }
 }
 

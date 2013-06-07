@@ -18,4 +18,9 @@ void CinderGLSketch::privateUpdate__()
     mFrameCount++;
 }
 
+std::string CinderGLSketch::getAppPath()
+{
+  return [[[NSBundle mainBundle] bundlePath] UTF8String];
+}
+
 } // namespace cinder

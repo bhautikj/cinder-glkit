@@ -57,7 +57,9 @@ public:
     void setActiveTouches(std::vector<app::TouchEvent::Touch> touches){ mActiveTouches = touches; }
     
     std::ostream& console(){ return std::cout; }
-    
+  
+    static std::string getAppPath();
+  
     bool mNeedsSetup;
 
 protected:
